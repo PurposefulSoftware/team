@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Car Pools</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Start at</th>
+      <th>End at</th>
+      <th>Location name</th>
+      <th>Location address</th>
+      <th>Location url</th>
+      <th>Details</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @car_pools.each do |car_pool| %>
+      <tr>
+        <td><%= car_pool.title %></td>
+        <td><%= car_pool.start_at %></td>
+        <td><%= car_pool.end_at %></td>
+        <td><%= car_pool.location_name %></td>
+        <td><%= car_pool.location_address %></td>
+        <td><%= car_pool.location_url %></td>
+        <td><%= car_pool.details %></td>
+        <td><%= link_to 'Show', car_pool %></td>
+        <td><%= link_to 'Edit', edit_car_pool_path(car_pool) %></td>
+        <td><%= link_to 'Destroy', car_pool, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Car pool', new_car_pool_path %>

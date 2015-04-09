@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @car_pool.title %>
+</p>
+
+<p>
+  <strong>Start at:</strong>
+  <%= @car_pool.start_at %>
+</p>
+
+<p>
+  <strong>End at:</strong>
+  <%= @car_pool.end_at %>
+</p>
+
+<p>
+  <strong>Location name:</strong>
+  <%= @car_pool.location_name %>
+</p>
+
+<p>
+  <strong>Location address:</strong>
+  <%= @car_pool.location_address %>
+</p>
+
+<p>
+  <strong>Location url:</strong>
+  <%= @car_pool.location_url %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @car_pool.details %>
+</p>
+
+<%= link_to 'Edit', edit_car_pool_path(@car_pool) %> |
+<%= link_to 'Back', car_pools_path %>
